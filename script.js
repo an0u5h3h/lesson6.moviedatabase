@@ -25,4 +25,13 @@ class Ui{
 }
 }
 Ui.displayMovies()
-document.querySelector('#dataform').addEventListener('addMovie',addMovie)
+document.querySelector('#dataform').addEventListener('add',addMovie)
+function addMovie(c){
+    c.preventDefault()
+    const title=document.querySelector('#text1').value;
+    const director=document.querySelector('#text2').value;
+    const year=document.querySelector('#text3').value;
+    const movie=new Movie(title, director, year);
+    console.log('helleo')
+    Ui.addMoviesToTheList(movie);
+}
