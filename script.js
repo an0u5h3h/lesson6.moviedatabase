@@ -25,7 +25,7 @@ class Ui{
 }
 }
 Ui.displayMovies()
-document.querySelector('#dataform').addEventListener('add',addMovie)
+document.querySelector('#dataform').addEventListener('submit',addMovie)
 function addMovie(c){
     c.preventDefault()
     const title=document.querySelector('#text1').value;
@@ -35,3 +35,4 @@ function addMovie(c){
     console.log('helleo')
     Ui.addMoviesToTheList(movie);
 }
+
